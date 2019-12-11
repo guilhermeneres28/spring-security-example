@@ -12,7 +12,6 @@ public class AppSpringMvcServletInitializer extends AbstractAnnotationConfigDisp
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        // TODO Auto-generated method stub
         return new Class[] {AppConfig.class};
     }
 
