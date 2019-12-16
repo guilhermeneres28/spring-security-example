@@ -13,6 +13,9 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         User.UserBuilder users = User.withDefaultPasswordEncoder();
-        auth.inMemoryAuthentication().withUser(users.username("guilherme").password("test123").roles("DEV"));
+        auth.inMemoryAuthentication()
+                .withUser(users.username("guilherme").password("test123").roles("DEV"))
+                .withUser(users.username("francisco").password("test123").roles("MANAGER"))
+                .withUser(users.username("eduardo").password("test123").roles("QA"));
     }
 }
